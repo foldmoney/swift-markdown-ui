@@ -9,6 +9,13 @@ public struct FontProperties: Hashable {
 
     /// A custom font family with the given name.
     case custom(String)
+      
+    /// Aurora - System font
+    case auroraSystem(CGFloat, Font.Weight)
+
+    /// Aurora - Custom font
+    case auroraCustom(String, CGFloat)
+      
   }
 
   /// The font family variant.

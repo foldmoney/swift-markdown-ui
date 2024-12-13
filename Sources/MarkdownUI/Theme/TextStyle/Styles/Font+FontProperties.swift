@@ -10,6 +10,10 @@ extension Font {
       font = .system(size: size, design: design)
     case .custom(let name):
       font = .custom(name, fixedSize: size)
+    case .auroraSystem(let size, let weight):
+      font = Font.system(size: size, weight: weight, design: .rounded)
+    case .auroraCustom(let fontName, let size):
+      font = Font.custom(fontName, size: size)
     }
 
     switch fontProperties.familyVariant {
